@@ -128,10 +128,10 @@ export function Header() {
                 </form>
 
                 <div className="flex items-center space-x-6">
-                  <a href="#" className="text-sm font-medium text-white hover:text-gray-100">
+                  <a href="/login" className="text-sm font-medium text-white hover:text-gray-100">
                     Sign in
                   </a>
-                  <a href="#" className="text-sm font-medium text-white hover:text-gray-100">
+                  <a href="/login" className="text-sm font-medium text-white hover:text-gray-100">
                     Create an account
                   </a>
                 </div>
