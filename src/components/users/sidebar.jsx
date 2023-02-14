@@ -1,13 +1,11 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
-import { Bars3CenterLeftIcon, Bars4Icon, ClockIcon, EnvelopeIcon, HomeIcon, PresentationChartBarIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3CenterLeftIcon, Bars4Icon, ClockIcon, CurrencyBangladeshiIcon, CurrencyDollarIcon, EnvelopeIcon, HomeIcon, PresentationChartBarIcon, QuestionMarkCircleIcon, VideoCameraSlashIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import {
   ChevronRightIcon,
   ChevronUpDownIcon,
   EllipsisVerticalIcon,
   MagnifyingGlassIcon,
-  QuestionMarkCircleIcon,
-  VideoCameraSlashIcon,
 } from '@heroicons/react/20/solid'
 
 const footers = [
@@ -75,11 +73,11 @@ const footers = [
 ]
 
 const navigation = [
-  { name: 'Home', href: '/officer/dashboard', icon: HomeIcon, current: true },
-  { name: 'Registration', href: '#', icon: Bars4Icon, current: false },
+  { name: 'Home', href: '/users/dashboard', icon: HomeIcon, current: true },
+  { name: 'Registrations', href: '#', icon: Bars4Icon, current: false },
   { name: 'Licenses', href: '#', icon: ClockIcon, current: false },
-  { name: 'Inbox', href: '#', icon: EnvelopeIcon, current: false },
   { name: 'Reports', href: '#', icon: PresentationChartBarIcon, current: false },
+  { name: 'Payment', href: '#', icon: CurrencyDollarIcon, current: false },
 
 ]
 const supports = [
@@ -87,6 +85,7 @@ const supports = [
   { name: 'Q&A', href: '#', icon: QuestionMarkCircleIcon, current: false },
   { name: 'User Guide', href: '#', icon: VideoCameraSlashIcon, current: false },
 ]
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -246,8 +245,8 @@ export default function Sidebar({ children }) {
                         alt=""
                       />
                       <span className="flex min-w-0 flex-1 flex-col">
-                        <span className="truncate text-sm font-medium text-gray-900">Officer One</span>
-                        <span className="truncate text-sm text-gray-500">@officerone</span>
+                        <span className="truncate text-sm font-medium text-gray-900">User One</span>
+                        <span className="truncate text-sm text-gray-500">@userone</span>
                       </span>
                     </span>
                     <ChevronUpDownIcon
@@ -271,7 +270,7 @@ export default function Sidebar({ children }) {
                     <Menu.Item>
                       {({ active }) => (
                         <a
-                          href="/officer/profile"
+                          href="/users/profile"
                           className={classNames(
                             active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                             'block px-4 py-2 text-sm'
