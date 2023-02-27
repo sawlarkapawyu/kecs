@@ -26,7 +26,7 @@ const CompanyBusinessRegistrationPage = () => {
             />
         </Head>
         <Header />
-        <Banner />
+        {/* <Banner /> */}
         <CompanyBusinessRegistration />
         <Footer />    
         </>

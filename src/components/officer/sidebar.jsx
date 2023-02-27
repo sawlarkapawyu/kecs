@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
-import { Bars3CenterLeftIcon, Bars4Icon, ClockIcon, EnvelopeIcon, HomeIcon, PresentationChartBarIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ArrowRightOnRectangleIcon, Bars3CenterLeftIcon, Bars4Icon, ClockIcon, EnvelopeIcon, FolderArrowDownIcon, FolderIcon, HomeIcon, PresentationChartBarIcon, UserCircleIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import {
   ChevronRightIcon,
   ChevronUpDownIcon,
@@ -9,6 +9,7 @@ import {
   QuestionMarkCircleIcon,
   VideoCameraSlashIcon,
 } from '@heroicons/react/20/solid'
+import { FolderMinusIcon } from '@heroicons/react/24/solid'
 
 const footers = [
   {
@@ -75,13 +76,12 @@ const footers = [
 ]
 
 const navigation = [
-  { name: 'Home', href: '/officer/dashboard', icon: HomeIcon, current: true },
-  { name: 'Registration', href: '#', icon: Bars4Icon, current: false },
-  { name: 'Licenses', href: '#', icon: ClockIcon, current: false },
-  { name: 'Inbox', href: '#', icon: EnvelopeIcon, current: false },
-  { name: 'Reports', href: '#', icon: PresentationChartBarIcon, current: false },
-
+  { name: 'Home', href: '/officer/dashboard', icon: HomeIcon, current: false },
+  { name: 'Company Management', href: '/officer/company', icon: FolderMinusIcon, current: false },
+  { name: 'Business & License', href: '/officer/business_licenses', icon: FolderIcon, current: false },
+  { name: 'User Management', href: '/officer/users', icon: UserCircleIcon, current: false },
 ]
+
 const supports = [
   { name: 'Inbox', href: '#', icon: EnvelopeIcon, current: false },
   { name: 'Q&A', href: '#', icon: QuestionMarkCircleIcon, current: false },
@@ -197,7 +197,7 @@ export default function Sidebar({ children }) {
                               className="group flex items-center rounded-md px-3 py-2 text-base font-medium leading-5 text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                             >
                               <span
-                                className={classNames(team.bgColorClass, 'w-2.5 h-2.5 mr-4 rounded-full')}
+                                className={classNames(team.bgColorClass, 'rounded-full')}
                                 aria-hidden="true"
                               />
                               <team.icon
@@ -224,20 +224,21 @@ export default function Sidebar({ children }) {
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col lg:border-r lg:border-gray-200 lg:bg-gray-100 lg:pt-5 lg:pb-4">
+        <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col lg:border-r lg:border-sky-800 lg:bg-sky-900 lg:pt-5 lg:pb-4">
           <div className="flex flex-shrink-0 items-center px-6">
             <img
               className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=purple&shade=500"
+              src="https://tailwindui.com/img/logos/mark.svg?color=white"
               alt="Your Company"
             />
           </div>
+
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="mt-5 flex h-0 flex-1 flex-col overflow-y-auto pt-1">
             {/* User account dropdown */}
             <Menu as="div" className="relative inline-block px-3 text-left">
               <div>
-                <Menu.Button className="group w-full rounded-md bg-gray-100 px-3.5 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                <Menu.Button className="group w-full rounded-md bg-gray-100 px-3.5 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-100">
                   <span className="flex w-full items-center justify-between">
                     <span className="flex min-w-0 items-center justify-between space-x-3">
                       <img
@@ -326,27 +327,7 @@ export default function Sidebar({ children }) {
                 </Menu.Items>
               </Transition>
             </Menu>
-            {/* Sidebar Search */}
-            <div className="mt-5 px-3">
-              <label htmlFor="search" className="sr-only">
-                Search
-              </label>
-              <div className="relative mt-1 rounded-md shadow-sm">
-                <div
-                  className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
-                  aria-hidden="true"
-                >
-                  <MagnifyingGlassIcon className="mr-3 h-4 w-4 text-gray-400" aria-hidden="true" />
-                </div>
-                <input
-                  type="text"
-                  name="search"
-                  id="search"
-                  className="block w-full rounded-md border-gray-300 pl-9 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Search"
-                />
-              </div>
-            </div>
+            
             {/* Navigation */}
             <nav className="mt-6 px-3">
               <div className="space-y-1">
@@ -355,7 +336,7 @@ export default function Sidebar({ children }) {
                     key={item.name}
                     href={item.href}
                     className={classNames(
-                      item.current ? 'bg-gray-200 text-gray-900' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50',
+                      item.current ? 'bg-gray-200 text-white' : 'text-white hover:text-gray-900 hover:bg-gray-50',
                       'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
                     )}
                     aria-current={item.current ? 'page' : undefined}
@@ -373,7 +354,7 @@ export default function Sidebar({ children }) {
               </div>
               <div className="mt-8">
                 {/* Secondary navigation */}
-                <h3 className="px-3 text-sm font-medium text-gray-500" id="desktop-teams-headline">
+                <h3 className="px-3 text-sm font-medium text-white" id="desktop-teams-headline">
                   Help & Support
                 </h3>
                 <div className="mt-1 space-y-1" role="group" aria-labelledby="desktop-teams-headline">
@@ -382,7 +363,7 @@ export default function Sidebar({ children }) {
                       key={item.name}
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-200 text-gray-900' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50',
+                        item.current ? 'bg-gray-200 text-white' : 'text-white hover:text-gray-900 hover:bg-gray-50',
                         'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
                       )}
                       aria-current={item.current ? 'page' : undefined}

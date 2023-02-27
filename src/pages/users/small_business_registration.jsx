@@ -26,7 +26,7 @@ const SmallBusinessRegistrationPage = () => {
             />
         </Head>
         <Header />
-        <Banner />
+        {/* <Banner /> */}
         <SmallBusinessRegistration />
         <Footer />    
         </>

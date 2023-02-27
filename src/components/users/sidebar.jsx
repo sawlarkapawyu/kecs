@@ -1,9 +1,10 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
-import { Bars3CenterLeftIcon, Bars4Icon, ClockIcon, CurrencyBangladeshiIcon, CurrencyDollarIcon, EnvelopeIcon, HomeIcon, PresentationChartBarIcon, QuestionMarkCircleIcon, VideoCameraSlashIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3CenterLeftIcon, Bars4Icon, ClockIcon, CurrencyBangladeshiIcon, CurrencyDollarIcon, DocumentArrowDownIcon, DocumentIcon, DocumentPlusIcon, EnvelopeIcon, HomeIcon, PresentationChartBarIcon, QuestionMarkCircleIcon, VideoCameraSlashIcon, XMarkIcon, FolderIcon } from '@heroicons/react/24/outline'
 import {
   ChevronRightIcon,
   ChevronUpDownIcon,
+  DocumentCheckIcon,
   EllipsisVerticalIcon,
   MagnifyingGlassIcon,
 } from '@heroicons/react/20/solid'
@@ -74,10 +75,11 @@ const footers = [
 
 const navigation = [
   { name: 'Home', href: '/users/dashboard', icon: HomeIcon, current: true },
-  { name: 'Registrations', href: '#', icon: Bars4Icon, current: false },
-  { name: 'Licenses', href: '#', icon: ClockIcon, current: false },
+  { name: 'Company Registration', href: '#', icon: FolderIcon, current: false },
+  { name: 'Business & License Registration', href: '#', icon: FolderIcon, current: false },
   { name: 'Reports', href: '#', icon: PresentationChartBarIcon, current: false },
   { name: 'Payment', href: '#', icon: CurrencyDollarIcon, current: false },
+  { name: 'Related Documents', href: '#', icon: DocumentIcon, current: false },
 
 ]
 const supports = [
@@ -236,7 +238,7 @@ export default function Sidebar({ children }) {
             {/* User account dropdown */}
             <Menu as="div" className="relative inline-block px-3 text-left">
               <div>
-                <Menu.Button className="group w-full rounded-md bg-gray-100 px-3.5 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+                <Menu.Button className="group w-full rounded-md bg-gray-100 px-3.5 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-100">
                   <span className="flex w-full items-center justify-between">
                     <span className="flex min-w-0 items-center justify-between space-x-3">
                       <img
@@ -407,7 +409,7 @@ export default function Sidebar({ children }) {
           <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white lg:hidden">
             <button
               type="button"
-              className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500 lg:hidden"
+              className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500 lg:hidden"
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
@@ -437,7 +439,7 @@ export default function Sidebar({ children }) {
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+                    <Menu.Button className="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2">
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"

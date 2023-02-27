@@ -131,7 +131,7 @@ export function Header() {
                   <a href="/login" className="text-sm font-medium text-white hover:text-gray-100">
                     Sign in
                   </a>
-                  <a href="/login" className="text-sm font-medium text-white hover:text-gray-100">
+                  <a href="/register" className="text-sm font-medium text-white hover:text-gray-100">
                     Create an account
                   </a>
                 </div>
