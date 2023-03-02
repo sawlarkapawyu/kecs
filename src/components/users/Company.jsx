@@ -561,7 +561,17 @@ export function Company() {
                 </ol>
             </nav>
             {/* Breadcrumbs Section End */}
-            <div className="w-full max-w-screen-xl py-4">
+            <div className="py-4 border-b border-gray-200">
+                <div className="text-center">
+                <Image
+                    className="inline-block w-20 h-20 rounded-full"
+                    src={logo}
+                    alt=""
+                />
+                </div>
+                <h3 className="text-lg font-medium leading-6 text-center text-gray-900">KNU-Karen National Union <br></br> Central Economic Committee <br></br>Company, Business Registration Application</h3>
+            </div>
+            <div className="py-4 border-b border-gray-200">
                 <Steps className='px-4 mt-6 sm:px-6 lg:px-8 ' current={current} items={items} />
                 
                 <div className='px-4 mt-6 sm:px-6 lg:px-8'>{steps[current].content}</div>

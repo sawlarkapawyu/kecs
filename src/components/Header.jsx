@@ -31,9 +31,9 @@ const registration = [
     icon: ChartBarIcon,
   },
   {
-    name: 'Business Registration',
+    name: 'Business & Licenses',
     description: 'Speak directly to your customers in a more meaningful way.',
-    href: '/users/company_business_registration',
+    href: '/users/business_licenses',
     icon: CursorArrowRaysIcon,
   },
   {
