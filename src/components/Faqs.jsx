@@ -30,8 +30,8 @@ export function Faqs() {
   return (
     <Container className="relative">
       <div className="bg-white py-2 shadow-sm">
-        <div className="mx-auto max-w-7xl px-2 py-2 sm:py-8 lg:py-20 lg:px-2">
-          <div className="mx-auto max-w-7xl divide-y divide-gray-900/10">
+        <div className="mx-auto px-2 py-2 sm:py-8 lg:py-20 lg:px-2">
+          <div className="mx-auto divide-y divide-gray-900/10">
             <h2 className="text-2xl font-bold leading-10 tracking-tight text-black">Frequently asked questions</h2>
             <dl className="mt-10 space-y-6 divide-y divide-white/10">
               {faqs.map((faq) => (

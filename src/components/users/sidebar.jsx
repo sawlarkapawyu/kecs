@@ -1,13 +1,15 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
-import { Bars3CenterLeftIcon, Bars4Icon, ClockIcon, CurrencyBangladeshiIcon, CurrencyDollarIcon, DocumentArrowDownIcon, DocumentIcon, DocumentPlusIcon, EnvelopeIcon, HomeIcon, PresentationChartBarIcon, QuestionMarkCircleIcon, VideoCameraSlashIcon, XMarkIcon, FolderIcon } from '@heroicons/react/24/outline'
+import { ArrowRightOnRectangleIcon, Bars3CenterLeftIcon, Bars4Icon, ClockIcon, EnvelopeIcon, FolderArrowDownIcon, FolderIcon, HomeIcon, PresentationChartBarIcon, UserCircleIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import {
   ChevronRightIcon,
   ChevronUpDownIcon,
-  DocumentCheckIcon,
   EllipsisVerticalIcon,
   MagnifyingGlassIcon,
+  QuestionMarkCircleIcon,
+  VideoCameraSlashIcon,
 } from '@heroicons/react/20/solid'
+import { FolderMinusIcon } from '@heroicons/react/24/solid'
 
 const footers = [
   {
@@ -74,20 +76,16 @@ const footers = [
 ]
 
 const navigation = [
-  { name: 'Home', href: '/users/dashboard', icon: HomeIcon, current: true },
-  { name: 'Company Registration', href: '#', icon: FolderIcon, current: false },
-  { name: 'Business & License Registration', href: '#', icon: FolderIcon, current: false },
-  { name: 'Reports', href: '#', icon: PresentationChartBarIcon, current: false },
-  { name: 'Payment', href: '#', icon: CurrencyDollarIcon, current: false },
-  { name: 'Related Documents', href: '#', icon: DocumentIcon, current: false },
-
+  { name: 'Home', href: '/users/dashboard', icon: HomeIcon, current: false },
+  { name: 'Company Registration', href: '/users/companyRegistration', icon: FolderMinusIcon, current: false },
+  { name: 'Business & License Registration', href: '', icon: FolderIcon, current: false },
 ]
+
 const supports = [
   { name: 'Inbox', href: '#', icon: EnvelopeIcon, current: false },
   { name: 'Q&A', href: '#', icon: QuestionMarkCircleIcon, current: false },
   { name: 'User Guide', href: '#', icon: VideoCameraSlashIcon, current: false },
 ]
-
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -198,7 +196,7 @@ export default function Sidebar({ children }) {
                               className="group flex items-center rounded-md px-3 py-2 text-base font-medium leading-5 text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                             >
                               <span
-                                className={classNames(team.bgColorClass, 'w-2.5 h-2.5 mr-4 rounded-full')}
+                                className={classNames(team.bgColorClass, 'rounded-full')}
                                 aria-hidden="true"
                               />
                               <team.icon
@@ -225,14 +223,15 @@ export default function Sidebar({ children }) {
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col lg:border-r lg:border-gray-200 lg:bg-gray-100 lg:pt-5 lg:pb-4">
+        <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col lg:border-r lg:border-sky-800 lg:bg-sky-900 lg:pt-5 lg:pb-4">
           <div className="flex flex-shrink-0 items-center px-6">
             <img
               className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=purple&shade=500"
+              src="https://tailwindui.com/img/logos/mark.svg?color=white"
               alt="Your Company"
             />
           </div>
+
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="mt-5 flex h-0 flex-1 flex-col overflow-y-auto pt-1">
             {/* User account dropdown */}
@@ -248,7 +247,7 @@ export default function Sidebar({ children }) {
                       />
                       <span className="flex min-w-0 flex-1 flex-col">
                         <span className="truncate text-sm font-medium text-gray-900">User One</span>
-                        <span className="truncate text-sm text-gray-500">@userone</span>
+                        <span className="truncate text-sm text-gray-500">@UserOne</span>
                       </span>
                     </span>
                     <ChevronUpDownIcon
@@ -272,7 +271,7 @@ export default function Sidebar({ children }) {
                     <Menu.Item>
                       {({ active }) => (
                         <a
-                          href="/users/profile"
+                          href="/officer/profile"
                           className={classNames(
                             active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                             'block px-4 py-2 text-sm'
@@ -327,27 +326,7 @@ export default function Sidebar({ children }) {
                 </Menu.Items>
               </Transition>
             </Menu>
-            {/* Sidebar Search */}
-            <div className="mt-5 px-3">
-              <label htmlFor="search" className="sr-only">
-                Search
-              </label>
-              <div className="relative mt-1 rounded-md shadow-sm">
-                <div
-                  className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
-                  aria-hidden="true"
-                >
-                  <MagnifyingGlassIcon className="mr-3 h-4 w-4 text-gray-400" aria-hidden="true" />
-                </div>
-                <input
-                  type="text"
-                  name="search"
-                  id="search"
-                  className="block w-full rounded-md border-gray-300 pl-9 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Search"
-                />
-              </div>
-            </div>
+            
             {/* Navigation */}
             <nav className="mt-6 px-3">
               <div className="space-y-1">
@@ -356,7 +335,7 @@ export default function Sidebar({ children }) {
                     key={item.name}
                     href={item.href}
                     className={classNames(
-                      item.current ? 'bg-gray-200 text-gray-900' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50',
+                      item.current ? 'bg-gray-200 text-white' : 'text-white hover:text-gray-900 hover:bg-gray-50',
                       'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
                     )}
                     aria-current={item.current ? 'page' : undefined}
@@ -374,7 +353,7 @@ export default function Sidebar({ children }) {
               </div>
               <div className="mt-8">
                 {/* Secondary navigation */}
-                <h3 className="px-3 text-sm font-medium text-gray-500" id="desktop-teams-headline">
+                <h3 className="px-3 text-sm font-medium text-white" id="desktop-teams-headline">
                   Help & Support
                 </h3>
                 <div className="mt-1 space-y-1" role="group" aria-labelledby="desktop-teams-headline">
@@ -383,7 +362,7 @@ export default function Sidebar({ children }) {
                       key={item.name}
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-200 text-gray-900' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50',
+                        item.current ? 'bg-gray-200 text-white' : 'text-white hover:text-gray-900 hover:bg-gray-50',
                         'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
                       )}
                       aria-current={item.current ? 'page' : undefined}
@@ -409,7 +388,7 @@ export default function Sidebar({ children }) {
           <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white lg:hidden">
             <button
               type="button"
-              className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500 lg:hidden"
+              className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500 lg:hidden"
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
@@ -439,7 +418,7 @@ export default function Sidebar({ children }) {
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2">
+                    <Menu.Button className="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
@@ -526,7 +505,7 @@ export default function Sidebar({ children }) {
                 </div>
             </main>
             <footer className="bg-white">
-              <div className="mx-auto max-w-7xl py-12 px-6 md:flex md:items-center md:justify-between lg:px-8">
+              <div className="mx-auto py-12 px-6 md:flex md:items-center md:justify-between lg:px-8">
                 <div className="flex justify-center space-x-6 md:order-2">
                   {footers.map((item) => (
                     <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">

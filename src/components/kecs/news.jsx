@@ -121,7 +121,7 @@ export function News() {
         <Container>
             {/* Breadcrumbs Section Start */}
             <nav className="flex border-b border-gray-200 bg-white py-4" aria-label="Breadcrumb">
-                <ol role="list" className="mx-auto flex w-full max-w-screen-xl space-x-4">
+                <ol role="list" className="mx-auto flex w-full space-x-4">
                     <li className="flex">
                     <div className="flex items-center">
                         <a href="#" className="text-gray-400 hover:text-gray-500">

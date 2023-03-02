@@ -10,7 +10,7 @@ export function Contact() {
         <Container>
             {/* Breadcrumbs Section Start */}
             <nav className="flex border-b border-gray-200 bg-white py-4" aria-label="Breadcrumb">
-                <ol role="list" className="mx-auto flex w-full max-w-screen-xl space-x-4">
+                <ol role="list" className="mx-auto flex w-full space-x-4">
                     <li className="flex">
                     <div className="flex items-center">
                         <a href="#" className="text-gray-400 hover:text-gray-500">
@@ -45,7 +45,7 @@ export function Contact() {
             </nav>
             {/* Breadcrumbs Section End */}
             <div className="bg-white-100">
-                <div className="mx-auto max-w-7xl py-2">
+                <div className="mx-auto py-2">
                     <div className="relative bg-white shadow-xl">
                         <h2 className="sr-only">Contact us</h2>
 

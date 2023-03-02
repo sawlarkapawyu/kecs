@@ -27,7 +27,7 @@ const registration = [
   {
     name: 'Company Registration',
     description: 'Get a better understanding of where your traffic is coming from.',
-    href: '/users/company_business_registration',
+    href: '/users/company',
     icon: ChartBarIcon,
   },
   {
@@ -103,14 +103,14 @@ export function Header() {
         <nav aria-label="Top">
           {/* Top navigation start */}
           <div className="bg-sky-900 drop-shadow-md">
-              <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between h-10 px-4 mx-auto sm:px-6 lg:px-8">
                 {/* Currency selector */}
                 <form>
                   <div>
                     <label htmlFor="desktop-currency" className="sr-only">
                       Currency
                     </label>
-                    <div className="group relative -ml-2 rounded-md border-transparent bg-inherit focus-within:ring-2 focus-within:ring-white">
+                    <div className="relative -ml-2 border-transparent rounded-md group bg-inherit focus-within:ring-2 focus-within:ring-white">
                       <select
                         id="desktop-currency"
                         name="currency"
@@ -120,8 +120,8 @@ export function Header() {
                           <option key={currency}>{currency}</option>
                         ))}
                       </select>
-                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
-                        <ChevronDownIcon className="h-5 w-5 text-gray-300" aria-hidden="true" />
+                      <div className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
+                        <ChevronDownIcon className="w-5 h-5 text-gray-300" aria-hidden="true" />
                       </div>
                     </div>
                   </div>
@@ -141,23 +141,23 @@ export function Header() {
         {/* Top navigation end */}
 
         <Popover className="relative bg-white">
-          <div className="pointer-events-none absolute inset-0 z-30" aria-hidden="true" />
+          <div className="absolute inset-0 z-30 pointer-events-none" aria-hidden="true" />
             <div className="relative z-20">
-              <div className="mx-auto flex max-w-7xl items-center justify-between py-5 px-6 sm:py-4 md:justify-start md:space-x-10 lg:px-8 bg-gradient-to-r from-sky-900 to-sky-500">
+              <div className="flex items-center justify-between px-6 py-5 mx-auto sm:py-4 md:justify-start md:space-x-10 lg:px-8 bg-gradient-to-r from-sky-900 to-sky-500">
                 <div>
                   <a href="#" className="flex">
                     <span className="sr-only">Your Company</span>
                     <img
-                      className="h-8 w-auto sm:h-10"
+                      className="w-auto h-8 sm:h-10"
                       src="https://tailwindui.com/img/logos/mark.svg?color=white&shade=600"
                       alt=""
                     />
                   </a>
                 </div>
                 <div className="-my-2 -mr-2 md:hidden">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
+                  <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
                     <span className="sr-only">Open menu</span>
-                    <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                    <Bars3Icon className="w-6 h-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
                 <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
@@ -196,18 +196,18 @@ export function Header() {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 -translate-y-1"
                           >
-                            <Popover.Panel className="absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block">
-                              <div className="mx-auto grid max-w-7xl gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
+                            <Popover.Panel className="absolute inset-x-0 z-10 hidden transform bg-white shadow-lg top-full md:block">
+                              <div className="grid px-4 py-6 mx-auto gap-y-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
                                 {registration.map((item) => (
                                   <a
                                     key={item.name}
                                     href={item.href}
-                                    className="-m-3 flex flex-col justify-between rounded-lg p-3 hover:bg-gray-50"
+                                    className="flex flex-col justify-between p-3 -m-3 rounded-lg hover:bg-gray-50"
                                   >
                                     <div className="flex md:h-full lg:flex-col">
                                       <div className="flex-shrink-0">
-                                        <span className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-sky-500 text-white sm:h-12 sm:w-12">
-                                          <item.icon className="h-6 w-6" aria-hidden="true" />
+                                        <span className="inline-flex items-center justify-center w-10 h-10 text-white rounded-md bg-sky-500 sm:h-12 sm:w-12">
+                                          <item.icon className="w-6 h-6" aria-hidden="true" />
                                         </span>
                                       </div>
                                       <div className="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
@@ -225,14 +225,14 @@ export function Header() {
                                 ))}
                               </div>
                               <div className="bg-gray-50">
-                                <div className="mx-auto max-w-7xl space-y-6 px-4 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8">
+                                <div className="px-4 py-5 mx-auto space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8">
                                   {callsToAction.map((item) => (
                                     <div key={item.name} className="flow-root">
                                       <a
                                         href={item.href}
-                                        className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
+                                        className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100"
                                       >
-                                        <item.icon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                        <item.icon className="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
                                         <span className="ml-3">{item.name}</span>
                                       </a>
                                     </div>
@@ -275,22 +275,22 @@ export function Header() {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 -translate-y-1"
                           >
-                            <Popover.Panel className="absolute inset-x-0 top-full z-10 hidden transform shadow-lg md:block">
+                            <Popover.Panel className="absolute inset-x-0 z-10 hidden transform shadow-lg top-full md:block">
                               <div className="absolute inset-0 flex">
                                 <div className="w-1/2 bg-white" />
                                 <div className="w-1/2 bg-gray-50" />
                               </div>
-                              <div className="relative mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-                                <nav className="grid gap-y-10 bg-white px-4 py-8 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12">
+                              <div className="relative grid grid-cols-1 mx-auto lg:grid-cols-2">
+                                <nav className="grid px-4 py-8 bg-white gap-y-10 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12">
                                   <div>
                                     <ul role="list" className="mt-5 space-y-6">
                                       {department1.map((item) => (
                                         <li key={item.name} className="flow-root">
                                           <a
                                             href={item.href}
-                                            className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-50"
+                                            className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50"
                                           >
-                                            <item.icon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                            <item.icon className="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
                                             <span className="ml-4">{item.name}</span>
                                           </a>
                                         </li>
@@ -303,9 +303,9 @@ export function Header() {
                                         <li key={item.name} className="flow-root">
                                           <a
                                             href={item.href}
-                                            className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-50"
+                                            className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50"
                                           >
-                                            <item.icon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                            <item.icon className="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
                                             <span className="ml-4">{item.name}</span>
                                           </a>
                                         </li>
@@ -313,18 +313,18 @@ export function Header() {
                                     </ul>
                                   </div>
                                 </nav>
-                                <div className="bg-gray-50 px-4 py-8 sm:py-12 sm:px-6 lg:px-8 xl:pl-12">
+                                <div className="px-4 py-8 bg-gray-50 sm:py-12 sm:px-6 lg:px-8 xl:pl-12">
                                   <div>
                                     <h3 className="text-base font-medium text-gray-500">From the blog</h3>
                                     <ul role="list" className="mt-6 space-y-6">
                                       {blogPosts.map((post) => (
                                         <li key={post.id} className="flow-root">
-                                          <a href={post.href} className="-m-3 flex rounded-lg p-3 hover:bg-gray-100">
-                                            <div className="hidden flex-shrink-0 sm:block">
-                                              <img className="h-20 w-32 rounded-md object-cover" src={post.imageUrl} alt="" />
+                                          <a href={post.href} className="flex p-3 -m-3 rounded-lg hover:bg-gray-100">
+                                            <div className="flex-shrink-0 hidden sm:block">
+                                              <img className="object-cover w-32 h-20 rounded-md" src={post.imageUrl} alt="" />
                                             </div>
-                                            <div className="w-0 flex-1 sm:ml-8">
-                                              <h4 className="truncate text-base font-medium text-gray-900">{post.name}</h4>
+                                            <div className="flex-1 w-0 sm:ml-8">
+                                              <h4 className="text-base font-medium text-gray-900 truncate">{post.name}</h4>
                                               <p className="mt-1 text-sm text-gray-500">{post.preview}</p>
                                             </div>
                                           </a>
@@ -370,22 +370,22 @@ export function Header() {
             >
             <Popover.Panel
               focus
-              className="absolute inset-x-0 top-0 z-30 origin-top-right transform p-2 transition md:hidden"
+              className="absolute inset-x-0 top-0 z-30 p-2 transition origin-top-right transform md:hidden"
             >
-              <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+              <div className="bg-white divide-y-2 rounded-lg shadow-lg divide-gray-50 ring-1 ring-black ring-opacity-5">
                 <div className="px-5 pt-5 pb-6 sm:pb-8">
                   <div className="flex items-center justify-between">
                     <div>
                       <img
-                        className="h-8 w-auto"
+                        className="w-auto h-8"
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                         alt="Your Company"
                       />
                     </div>
                     <div className="-mr-2">
-                      <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
+                      <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
                         <span className="sr-only">Close menu</span>
-                        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                        <XMarkIcon className="w-6 h-6" aria-hidden="true" />
                       </Popover.Button>
                     </div>
                   </div>
@@ -396,10 +396,10 @@ export function Header() {
                           <a
                             key={item.name}
                             href={item.href}
-                            className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
+                            className="flex items-center p-3 -m-3 rounded-lg hover:bg-gray-50"
                           >
-                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-sky-500 text-white sm:h-12 sm:w-12">
-                              <item.icon className="h-6 w-6" aria-hidden="true" />
+                            <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white rounded-md bg-sky-500 sm:h-12 sm:w-12">
+                              <item.icon className="w-6 h-6" aria-hidden="true" />
                             </div>
                             <div className="ml-4 text-base font-medium text-gray-900">{item.name}</div>
                           </a>
@@ -414,35 +414,35 @@ export function Header() {
                     </nav>
                   </div>
                 </div>
-                <div className="py-6 px-5">
+                <div className="px-5 py-6">
                   <div className="grid grid-cols-2 gap-4">
-                    <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="#" className="text-base font-medium text-gray-900 rounded-md hover:text-gray-700">
                       Pricing
                     </a>
-                    <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="#" className="text-base font-medium text-gray-900 rounded-md hover:text-gray-700">
                       Docs
                     </a>
-                    <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="#" className="text-base font-medium text-gray-900 rounded-md hover:text-gray-700">
                       Company
                     </a>
-                    <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="#" className="text-base font-medium text-gray-900 rounded-md hover:text-gray-700">
                       Resources
                     </a>
-                    <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="#" className="text-base font-medium text-gray-900 rounded-md hover:text-gray-700">
                       Blog
                     </a>
-                    <a href="#" className="rounded-md text-base font-medium text-gray-900 hover:text-gray-700">
+                    <a href="#" className="text-base font-medium text-gray-900 rounded-md hover:text-gray-700">
                       Contact Sales
                     </a>
                   </div>
                   <div className="mt-6">
                     <a
                       href="#"
-                      className="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-sky-700"
+                      className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-sky-600 hover:bg-sky-700"
                     >
                       Sign up
                     </a>
-                    <p className="mt-6 text-center text-base font-medium text-gray-500">
+                    <p className="mt-6 text-base font-medium text-center text-gray-500">
                       Existing customer?{' '}
                       <a href="#" className="text-sky-600 hover:text-sky-500">
                         Sign in

@@ -13,12 +13,12 @@ export function CompanyBusinessRegistration() {
     return (
         <Container>
             {/* Breadcrumbs Section Start */}
-            <nav className="flex border-b border-gray-200 bg-white py-4" aria-label="Breadcrumb">
-                <ol role="list" className="mx-auto flex w-full max-w-screen-xl space-x-4">
+            <nav className="flex py-4 bg-white border-b border-gray-200" aria-label="Breadcrumb">
+                <ol role="list" className="flex w-full max-w-screen-xl mx-auto space-x-4">
                     <li className="flex">
                     <div className="flex items-center">
                         <a href="#" className="text-gray-400 hover:text-gray-500">
-                        <HomeIcon className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
+                        <HomeIcon className="flex-shrink-0 w-5 h-5" aria-hidden="true" />
                         <span className="sr-only">Home</span>
                         </a>
                     </div>
@@ -27,7 +27,7 @@ export function CompanyBusinessRegistration() {
                     <li key={page.name} className="flex">
                         <div className="flex items-center">
                         <svg
-                            className="h-full w-6 flex-shrink-0 text-gray-200"
+                            className="flex-shrink-0 w-6 h-full text-gray-200"
                             viewBox="0 0 24 44"
                             preserveAspectRatio="none"
                             fill="currentColor"
@@ -49,18 +49,18 @@ export function CompanyBusinessRegistration() {
             </nav>
             {/* Breadcrumbs Section End */}
             
-            <form className="space-y-8 divide-y divide-gray-200 py-8">
+            <form className="py-8 space-y-8 divide-y divide-gray-200">
                 <div className="space-y-8 divide-y divide-gray-200">
                     <div>
                         <div>
                             <div className="text-center">
                             <Image
-                                className="inline-block h-20 w-20 rounded-full"
+                                className="inline-block w-20 h-20 rounded-full"
                                 src={logo}
                                 alt=""
                             />
                             </div>
-                            <h3 className="text-lg text-center font-medium leading-6 text-gray-900">KNU-Karen National Union <br></br> Central Economic Committee <br></br>Company, Business Registration Application</h3>
+                            <h3 className="text-lg font-medium leading-6 text-center text-gray-900">KNU-Karen National Union <br></br> Central Economic Committee <br></br>Company, Business Registration Application</h3>
                         </div>
                     </div>
 
@@ -68,7 +68,7 @@ export function CompanyBusinessRegistration() {
                         <div>
                             <h3 className="text-lg font-medium leading-6 text-gray-900">Applicant’s (Fields to be created accordingly)</h3>
                         </div>
-                        <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                        <div className="grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-6">
                             <div className="sm:col-span-3">
                                 <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                                     Company Name	(In English)
@@ -79,7 +79,7 @@ export function CompanyBusinessRegistration() {
                                     name="first-name"
                                     id="first-name"
                                     autoComplete="given-name"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     />
                                 </div>
                             </div>
@@ -94,7 +94,7 @@ export function CompanyBusinessRegistration() {
                                     name="last-name"
                                     id="last-name"
                                     autoComplete="family-name"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     />
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ export function CompanyBusinessRegistration() {
                                     name="last-name"
                                     id="last-name"
                                     autoComplete="family-name"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     />
                                 </div>  
                             </div>
@@ -122,7 +122,7 @@ export function CompanyBusinessRegistration() {
                                     id="country"
                                     name="country"
                                     autoComplete="country-name"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     >
                                     <option>Myanmar</option>
                                     <option>Thailand</option>
@@ -142,7 +142,7 @@ export function CompanyBusinessRegistration() {
                                     name="last-name"
                                     id="last-name"
                                     autoComplete="family-name"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     />
                                 </div>
                             </div>
@@ -156,7 +156,7 @@ export function CompanyBusinessRegistration() {
                                     name="email"
                                     type="email"
                                     autoComplete="email"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     />
                                 </div>
                             </div>
@@ -174,7 +174,7 @@ export function CompanyBusinessRegistration() {
                                         id="country"
                                         name="country"
                                         autoComplete="country"
-                                        className="h-full rounded-md border-transparent bg-transparent py-0 pl-3 pr-7 text-gray-500 focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                        className="h-full py-0 pl-3 text-gray-500 bg-transparent border-transparent rounded-md pr-7 focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                         >
                                         <option>US</option>
                                         <option>CA</option>
@@ -185,7 +185,7 @@ export function CompanyBusinessRegistration() {
                                         type="text"
                                         name="phone-number"
                                         id="phone-number"
-                                        className="block w-full rounded-md border-gray-300 pl-16 focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                        className="block w-full pl-16 border-gray-300 rounded-md focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                         placeholder="+1 (555) 987-6543"
                                     />
                                     </div>
@@ -202,7 +202,7 @@ export function CompanyBusinessRegistration() {
                                     name="street-address"
                                     id="street-address"
                                     autoComplete="street-address"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     />
                                 </div>
                             </div>
@@ -217,7 +217,7 @@ export function CompanyBusinessRegistration() {
                                     name="city"
                                     id="city"
                                     autoComplete="address-level2"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     />
                                 </div>
                             </div>
@@ -232,7 +232,7 @@ export function CompanyBusinessRegistration() {
                                     name="region"
                                     id="region"
                                     autoComplete="address-level1"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     />
                                 </div>
                             </div>
@@ -247,7 +247,7 @@ export function CompanyBusinessRegistration() {
                                     name="postal-code"
                                     id="postal-code"
                                     autoComplete="postal-code"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     />
                                 </div>
                             </div>
@@ -261,7 +261,7 @@ export function CompanyBusinessRegistration() {
                                     name="last-name"
                                     id="last-name"
                                     autoComplete="family-name"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     />
                                 </div>
                             </div>
@@ -275,7 +275,7 @@ export function CompanyBusinessRegistration() {
                                     name="last-name"
                                     id="last-name"
                                     autoComplete="family-name"
-                                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                    className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                     />
                                 </div>
                             </div>
@@ -283,7 +283,7 @@ export function CompanyBusinessRegistration() {
                     </div>
                 </div>
 
-                <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                <div className="grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-6">
                     <div className="sm:col-span-6">
                         <p className='text-justify'>This form is the registration of a business. This is only a form that recognizes a business that has registered its basic information with KNU. KNU does not endorse this business. Registration does not grant a business license or permission to implement any project. This registration may not be used to obtain licenses from Myanmar governments.</p>
                         </div>
@@ -297,7 +297,7 @@ export function CompanyBusinessRegistration() {
                                 name="date"
                                 id="date"
                                 autoComplete="family-name"
-                                className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                                className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                                 />
                             </div>
                         </div>
@@ -311,7 +311,7 @@ export function CompanyBusinessRegistration() {
                             name="text"
                             id="text"
                             autoComplete="family-name"
-                            className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                            className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                             />
                         </div>
                     </div>
@@ -325,7 +325,7 @@ export function CompanyBusinessRegistration() {
                             name="text"
                             id="text"
                             autoComplete="family-name"
-                            className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                            className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                             />
                         </div>
                     </div>
@@ -339,7 +339,7 @@ export function CompanyBusinessRegistration() {
                             name="text"
                             id="text"
                             autoComplete="family-name"
-                            className="block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
+                            className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
                             />
                         </div>
                     </div>
@@ -349,13 +349,13 @@ export function CompanyBusinessRegistration() {
                     <div className="flex justify-start">
                     <button
                         type="button"
-                        className="rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
+                        className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
                     >
                         Cancel
                     </button>
                     <button
                         type="submit"
-                        className="ml-3 inline-flex justify-center rounded-md border border-transparent bg-sky-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
+                        className="inline-flex justify-center px-4 py-2 ml-3 text-sm font-medium text-white border border-transparent rounded-md shadow-sm bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2"
                     >
                         Send
                     </button>
