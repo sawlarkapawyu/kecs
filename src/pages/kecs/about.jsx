@@ -24,7 +24,7 @@ const AboutPage = () => {
             />
         </Head>
         <Header />
-        <Banner />
+        {/* <Banner /> */}
         <About />
         <Footer />    
         </>

@@ -18,96 +18,23 @@ const pages = [
 const Step1 = () => (
     <div className='grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-6'>
       <div className="sm:col-span-2">
-        <label htmlFor="company_name" className="block text-sm font-medium text-gray-700">
-          Business Name
+        <label htmlFor="" className="block text-sm font-medium text-gray-700">
+            Company (or) Owner Name
         </label>
         <div className="mt-1">
           <input
-            id="company_name"
-            name="company_name"
+            id=""
+            name=""
             type="text"
             required
             className="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-sky-900 focus:outline-none focus:ring-sky-900 sm:text-sm"
           />
         </div>
       </div>
-  
-      <div className="sm:col-span-2">
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-          Email address
-        </label>
-        <div className="mt-1">
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            className="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-sky-900 focus:outline-none focus:ring-sky-800 sm:text-sm"
-          />
-        </div>
-      </div>
+      
     <div className="sm:col-span-2">
-        <div>
-            <label htmlFor="phone-number" className="block text-sm font-medium text-gray-700">
-            Phone Number
-            </label>
-            <div className="relative mt-1 rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 flex items-center">
-                    <label htmlFor="country" className="sr-only">
-                    Country
-                    </label>
-                    <select
-                    id="country"
-                    name="country"
-                    autoComplete="country"
-                    className="h-full py-0 pl-3 text-gray-500 bg-transparent border-transparent rounded-md pr-7 focus:border-sky-900 focus:ring-sky-800 sm:text-sm"
-                    >
-                    <option>US</option>
-                    <option>CA</option>
-                    <option>EU</option>
-                    </select>
-                </div>
-                <input
-                    type="text"
-                    name="phone-number"
-                    id="phone-number"
-                    className="block w-full pl-16 border-gray-300 rounded-md focus:border-sky-900 focus:ring-sky-800 sm:text-sm"
-                    placeholder="+1 (555) 987-6543"
-                />
-            </div>
-        </div>
-    </div>
-    <div className="sm:col-span-3">
-        <label htmlFor="company_name" className="block text-sm font-medium text-gray-700">
-          Company Name
-        </label>
-        <div className="mt-1">
-          <input
-            id="company_website"
-            name="company_website"
-            type="text"
-            required
-            className="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-sky-900 focus:outline-none focus:ring-sky-900 sm:text-sm"
-          />
-        </div>
-    </div>
-    <div className="sm:col-span-3">
-        <label htmlFor="company_name" className="block text-sm font-medium text-gray-700">
-          Company Key Personnel
-        </label>
-        <div className="mt-1">
-          <input
-            id="company_website"
-            name="company_website"
-            type="text"
-            required
-            className="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-sky-900 focus:outline-none focus:ring-sky-900 sm:text-sm"
-          />
-        </div>
-    </div>
-    <div className="sm:col-span-3">
       <label htmlFor="" className="block text-sm font-medium text-gray-700">
-          Company Structure
+          Company/Business Structure
       </label>
       <div className="mt-1">
           <select
@@ -124,47 +51,74 @@ const Step1 = () => (
           </select>
       </div>
     </div>
-    <div className="sm:col-span-3">
-      <label htmlFor="" className="block text-sm font-medium text-gray-700">
-          Business Type
-      </label>
-      <div className="mt-1">
-          <select
-          id=""
-          name=""
-          autoComplete=""
-          className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-900 focus:ring-sky-800 sm:text-sm"
-          >
-          <option>Type-1</option>
-          <option>Type-1</option>
-          </select>
-      </div>
+    <div className="sm:col-span-2">
+        <label htmlFor="company_name" className="block text-sm font-medium text-gray-700">
+          Company/Business Key Personnel
+        </label>
+        <div className="mt-1">
+          <input
+            id="company_website"
+            name="company_website"
+            type="text"
+            required
+            className="block w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md shadow-sm appearance-none focus:border-sky-900 focus:outline-none focus:ring-sky-900 sm:text-sm"
+          />
+        </div>
     </div>
-    <div className="sm:col-span-3">
-      <label htmlFor="street-address" className="block text-sm font-medium text-gray-700">
-          Street address
+
+    <div className="sm:col-span-2">
+            <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
+                Register with the government 
+            </label>
+            <div className="mt-1">
+                <input
+                    id=""
+                    name="notification-method"
+                    type="radio"
+                    defaultChecked=""
+                    className="w-4 h-4 border-gray-300 text-sky-600 focus:ring-sky-500"
+                />
+                <label htmlFor="" className="px-5 ml-3 text-sm font-medium text-gray-700">
+                    Yes    
+                </label>
+                <input
+                id=""
+                name="notification-method"
+                type="radio"
+                defaultChecked=""
+                className="w-4 h-4 border-gray-300 text-sky-600 focus:ring-sky-500"
+                />  
+                <label htmlFor="" className="px-5 ml-3 text-sm font-medium text-gray-700">
+                No
+                </label>
+            </div>
+        </div>
+    
+    <div className="sm:col-span-2">
+      <label htmlFor="" className="block text-sm font-medium text-gray-700">
+        Registration Number
       </label>
       <div className="mt-1">
           <input
           type="text"
-          name="street-address"
-          id="street-address"
+          name=""
+          id=""
           autoComplete="street-address"
           className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-900 focus:ring-sky-800 sm:text-sm"
           />
       </div>
     </div>
 
-    <div className="sm:col-span-3">
-      <label htmlFor="city" className="block text-sm font-medium text-gray-700">
-          City
+    <div className="sm:col-span-2">
+      <label htmlFor="" className="block text-sm font-medium text-gray-700">
+        Contact number 
       </label>
       <div className="mt-1">
           <input
           type="text"
-          name="city"
-          id="city"
-          autoComplete="address-level2"
+          name=""
+          id=""
+          autoComplete=""
           className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-900 focus:ring-sky-800 sm:text-sm"
           />
       </div>
@@ -172,7 +126,7 @@ const Step1 = () => (
 
     <div className="sm:col-span-3">
       <label htmlFor="region" className="block text-sm font-medium text-gray-700">
-          State / Province
+            Company Email Address 
       </label>
       <div className="mt-1">
           <input
@@ -187,7 +141,7 @@ const Step1 = () => (
 
     <div className="sm:col-span-3">
       <label htmlFor="postal-code" className="block text-sm font-medium text-gray-700">
-          ZIP / Postal code
+            Company Address (Original) 
       </label>
       <div className="mt-1">
           <input
@@ -206,50 +160,6 @@ const Step1 = () => (
   
 const Step2 = () => (
     <div className='grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-6'>
-        <div className="sm:col-span-2">
-            <label htmlFor="" className="block text-sm font-medium text-gray-700">
-                Period of Business
-            </label>
-            <div className="mt-1">
-                <input
-                type="text"
-                name=""
-                id=""
-                autoComplete=""
-                className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-900 focus:ring-sky-800 sm:text-sm"
-                />
-            </div>
-        </div>
-        <div className="sm:col-span-2">
-            <label htmlFor="" className="block text-sm font-medium text-gray-700">
-                Number of workers
-            </label>
-            <div className="mt-1">
-                <input
-                type="text"
-                name=""
-                id=""
-                autoComplete=""
-                className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-900 focus:ring-sky-800 sm:text-sm"
-                />
-            </div>
-        </div>
-
-        <div className="sm:col-span-2">
-            <label htmlFor="" className="block text-sm font-medium text-gray-700">
-                Period of business establishment  
-            </label>
-            <div className="mt-1">
-                <input
-                type="text"
-                name=""
-                id=""
-                autoComplete=""
-                className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-900 focus:ring-sky-800 sm:text-sm"
-                />
-            </div>
-        </div>
-
         <div className="sm:col-span-2">
             <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
                 Building to be used for business operation
@@ -484,50 +394,6 @@ const Step3 = () => (
     <div className="sm:col-span-2">
         <label htmlFor="" className="block text-sm font-medium text-gray-700">
             Permitted Location 
-        </label>
-        <div className="mt-1">
-            <input
-            type="text"
-            name=""
-            id=""
-            autoComplete=""
-            className="block w-full border-gray-300 rounded-md shadow-sm focus:border-sky-900 focus:ring-sky-800 sm:text-sm"
-            />
-        </div>
-    </div>
-
-    <div className="sm:col-span-2">
-        <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
-            Register with the government (If there is a registration certificate to submit concurrently) 
-        </label>
-        <div className="mt-1">
-            <input
-                id=""
-                name="notification-method"
-                type="radio"
-                defaultChecked=""
-                className="w-4 h-4 border-gray-300 text-sky-600 focus:ring-sky-500"
-            />
-            <label htmlFor="" className="px-5 ml-3 text-sm font-medium text-gray-700">
-                Yes    
-            </label>
-            
-            <input
-            id=""
-            name="notification-method"
-            type="radio"
-            defaultChecked=""
-            className="w-4 h-4 border-gray-300 text-sky-600 focus:ring-sky-500"
-            />  
-            <label htmlFor="" className="px-5 ml-3 text-sm font-medium text-gray-700">
-                No
-            </label>
-        </div>
-    </div>
-
-    <div className="sm:col-span-2">
-        <label htmlFor="" className="block text-sm font-medium text-gray-700">
-            If yes, provide your Registration Number
         </label>
         <div className="mt-1">
             <input

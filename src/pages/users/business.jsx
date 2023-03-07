@@ -1,7 +1,7 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Banner } from '@/components/Banner'
-import { News } from '@/components/kecs/news'
+import { Business, CompanyPage } from '@/components/users/Business'
 
 
 // import { useEffect, useState } from 'react'
@@ -11,10 +11,8 @@ import {
     ChevronRightIcon,
 } from '@heroicons/react/24/outline'
 
-const NewsPage = () => {
-    // const [dataError, setDataError] = useState(null)
-    // const [loading, setLoading] = useState(true)
-    
+const BusinessRegistrationPage = () => {
+  
     return (
         <>
         <Head>
@@ -26,10 +24,10 @@ const NewsPage = () => {
         </Head>
         <Header />
         {/* <Banner /> */}
-        <News />
+        <Business />
         <Footer />    
         </>
     )
 }
 
-export default NewsPage
+export default BusinessRegistrationPage

@@ -25,7 +25,7 @@ const ContactPage = () => {
             />
         </Head>
         <Header />
-        <Banner />
+        {/* <Banner /> */}
         <Contact />
         <Faqs />
         <Footer />   
